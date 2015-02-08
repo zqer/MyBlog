@@ -1,0 +1,10 @@
+{% if site.zqer.comments.provider and page.comments != false %}
+
+{% case site.zqer.comments.provider %}
+{% when "duoshuo" %}
+  {% include zqer/comments-providers/duoshuo %}
+{% when "custom" %}
+  {% include custom/comments %}
+{% endcase %}
+
+{% endif %}

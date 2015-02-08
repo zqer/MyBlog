@@ -1,0 +1,8 @@
+{% if site.safe and site.zqer.sharing.provider and page.zqer.sharing != false %}
+
+{% case site.zqer.sharing.provider %}
+{% when "custom" %}
+  {% include custom/sharing %}
+{% endcase %}
+
+{% endif %}
